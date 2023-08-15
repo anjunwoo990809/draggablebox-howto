@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './App.css';
+import '../App.css';
 import Page1 from './Page1';
 import Page2 from './Page2';
 import DragBar from './DragBar';

@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 
 function Page2({resizableLeftWidth}) {
     return (
         <div
-        style={{ width: `${100 - resizableLeftWidth}%`, backgroundColor: '#006064' }}
+        style={{ width: `${100 - resizableLeftWidth}%`, backgroundColor: 'blue' }}
         className="ResizableBlock"
         ></div>
     );
