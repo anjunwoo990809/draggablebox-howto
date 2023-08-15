@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import '../App.css';
-import Page1 from './Page1';
-import Page2 from './Page2';
 import DragBar from './DragBar';
 
-function DragBox({ isDragging, setIsDragging, resizableLeftWidth, setResizableLeftWidth, blockRef }) {
+// resizableLeftWidth
+function DragBox({ isDragging, setIsDragging, setResizableLeftWidth, blockRef, children }) {
     
     const startDrag = (event) => {
         event.preventDefault();
@@ -36,12 +35,18 @@ function DragBox({ isDragging, setIsDragging, resizableLeftWidth, setResizableLe
         };
     });
 
+    const childrenWithDragBars = [];
+    React.Children.forEach(children, (child, index) => {
+        childrenWithDragBars.push(child);
+        if (index < children.length - 1) {
+            childrenWithDragBars.push(<DragBar startDrag={startDrag} />);
+        };
+    });
+
     return (
         <div className="app">
             <div className="Block" ref={blockRef}>
-                <Page1 resizableLeftWidth={resizableLeftWidth}/>
-                <DragBar startDrag={startDrag}/>
-                <Page2 resizableLeftWidth={resizableLeftWidth}/>
+                {childrenWithDragBars}
             </div>
         </div>
     );

@@ -17,6 +17,18 @@
   box-sizing: border-box;
 }
 
+
+.item1{
+  height : 100vh;
+  background-color: azure;
+}
+
+.item2{
+  height : 100vh;
+  background-color: skyblue;
+}
+
+
 .Draggable {
   background: rgba(1, 1, 1, 0.2);
   border-bottom: 1px solid black;

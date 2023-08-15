@@ -1,13 +1,13 @@
 import React from 'react';
 import '../App.css';
 
-function Page2({resizableLeftWidth}) {
+export default function Page2({resizableLeftWidth, children}) {
     return (
         <div
-        style={{ width: `${100 - resizableLeftWidth}%`, backgroundColor: 'blue' }}
+        style={{ width: `${100 - resizableLeftWidth}%`}}
         className="ResizableBlock"
-        ></div>
+        >
+            {children}
+        </div>
     );
-}
-
-export default Page2;
+};

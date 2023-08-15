@@ -1,13 +1,13 @@
 import React from 'react';
 import '../App.css';
 
-function Page1({resizableLeftWidth}) {
+export default function Page1({resizableLeftWidth, children}) {
     return (
         <div
-        style={{ width: `${resizableLeftWidth}%`, backgroundColor: 'azure' }}
+        style={{ width: `${resizableLeftWidth}%`}}
         className="ResizableBlock"
-        ></div>
+        >
+            {children}
+        </div>
     );
-}
-
-export default Page1;
+};
