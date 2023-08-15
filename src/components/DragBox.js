@@ -35,6 +35,7 @@ function DragBox({ isDragging, setIsDragging, setResizableLeftWidth, blockRef, c
         };
     });
 
+    // insert DragBar component between Pages
     const childrenWithDragBars = [];
     React.Children.forEach(children, (child, index) => {
         childrenWithDragBars.push(child);
